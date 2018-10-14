@@ -19,8 +19,6 @@ main {
   max-width: 1450px;
 }
 
-/* TODO taka ætti padding af main þegar komið er fyrir ofan hámarksbreidd */
-
 h1 {
   text-align: center;
   margin: 20px 0;
@@ -39,7 +37,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* grid fyrir efni, setja þarf upp í html */
+/* grid fyrir efni */
 .grid {
   max-width: 1450px;
   margin-left: 20px;
@@ -59,6 +57,10 @@ h1 {
   padding-left: 10px;
 }
 
+.reverse {
+  flex-flow: column-reverse;
+}
+
 .col-12 {
   width: 100%;
 }
@@ -70,23 +72,26 @@ h1 {
 }
 
 /* grid fyrir cards */
-.card__row {
+
+.cards {
+  display: flex;
+  align-content: center;
+}
+
+.cards__row {
   display: flex;
   flex-direction: column;
   margin-left: -10px;
   margin-right: -10px;
 }
 
-.card__col {
+.cards__col {
   display: flex;
   padding-right: 10px;
   padding-left: 10px;
 }
 
-.cards {
-  display: flex;
-  align-content: center;
-}
+/* layout fyrir card */
 
 .card {
   display: flex;
@@ -145,19 +150,15 @@ h1 {
   margin-right: 10px;
 }
 
-.reverse {
-  flex-flow: column-reverse;
-}
-
 @media (min-width: 700px) {
 
-.card__row {
+.cards__row {
   flex-flow: row wrap;
   padding-right: 20px;
   padding-left: 20px;
 }
 
-.card__col {
+.cards__col {
   width: 50%;
 }
 
@@ -186,7 +187,7 @@ h1 {
   width: 50%;
 }
 
-.card__col {
+.cards__col {
   width: 33.333333%;
 }
   
@@ -194,7 +195,7 @@ h1 {
 
 @media (min-width: 1490px) {
 
-.card__row {
+.cards__row {
   padding-right: 0;
   padding-left: 0;
 }
@@ -202,7 +203,10 @@ h1 {
 .grid {
   margin-left: 0;
   margin-right: 0;
+
+
 }
 
 }
+
   
